@@ -26,9 +26,9 @@ export default function Layout({ children }: { children: ReactNode }) {
             },
           }}
         >
-          <Banner id="banner-1">
-            I failed my way to success - Thomas Edison
-          </Banner>
+          {/*<Banner id="banner-1">*/}
+          {/*  I failed my way to success - Thomas Edison*/}
+          {/*</Banner>*/}
           {children}
         </RootProvider>
       </body>
