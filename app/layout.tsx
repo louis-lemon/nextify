@@ -16,6 +16,8 @@ export default function Layout({ children }: { children: ReactNode }) {
           search={{
             enabled: true,
             options: {
+                type: 'static',
+                api: process.env.NODE_ENV === 'production' ? '/nextify/api/search' : '/api/search',
               links: [
                 ["Home", "/"],
                 ["About", "/about"],
