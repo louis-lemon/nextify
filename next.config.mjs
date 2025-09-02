@@ -5,13 +5,12 @@ const withMDX = createMDX();
 /** @type {import('next').NextConfig} */
 const config = {
   reactStrictMode: true,
+  output: 'export',
   images: {
-    remotePatterns: [
-      {
-        hostname: "images.pexels.com",
-      },
-    ],
+    unoptimized: true,
   },
+  basePath: process.env.NODE_ENV === 'production' ? '/nextify' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/nextify' : '',
 };
 
 export default withMDX(config);
